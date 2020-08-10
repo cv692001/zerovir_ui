@@ -3,6 +3,8 @@ import 'package:zerovir_ui/landing_screen.dart';
 import 'package:zerovir_ui/third_screen.dart';
 import 'package:zerovir_ui/disconnect_screen.dart';
 import 'package:zerovir_ui/device_screen.dart';
+import 'package:zerovir_ui/onStartClickConnnectingPage.dart';
+import 'package:zerovir_ui/summary_screen.dart';
 void main() {
   runApp(MyApp());
 }
