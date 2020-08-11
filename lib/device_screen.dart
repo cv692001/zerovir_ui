@@ -269,16 +269,14 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
 
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(150, 0, 25, 0),
-                  child: Stack(children: <Widget>[
-                    getContainer2(),
-                  ],),
-                ),
+                Stack(children: <Widget>[
+                  getContainer2(),
+                ],),
 
-                Text('Locating ZeroVir',
+                Text('  Locating ZeroVir',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 24,

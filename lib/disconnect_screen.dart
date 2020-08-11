@@ -138,39 +138,42 @@ class _disconnect_screenState extends State<disconnect_screen> {
               Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 15,
+                    height: 5,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  Expanded(
+                    child: Row(
 
-                    children: <Widget>[
-                      SizedBox(
-                        width: 240,
-                      ),
-                      Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                        scale: 12,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        SizedBox(
+                          width: 240,
+                        ),
+                        Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
+                          scale: 12,
 
-                      ),
-                    ],
+                        ),
+                      ],
+                    ),
                   ),
                     SizedBox(
-                      height: 35,
+                      height: 20,
                     ),
 
 
 
-                    Text('''Not able to locate to unit. Please
+                    Expanded(
+                      child: Text('''Not able to locate to unit. Please
 ensure device is powered on or move
 bit closer to device connections''',
-                          textAlign: TextAlign.center,
+                            textAlign: TextAlign.center,
 
-                          style: TextStyle(
-                            fontFamily: "Poppins",
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Hexcolor("#2b22aa"),
-                          ),),
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Hexcolor("#2b22aa"),
+                            ),),
+                    ),
 
 
 

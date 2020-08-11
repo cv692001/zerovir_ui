@@ -49,32 +49,34 @@ class _onStartClickState extends State<onStartClick> {
                           ),)
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                        alignment: Alignment.topRight,
-                        scale: 12,
-                      ),
-                    ],
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
+                          alignment: Alignment.topRight,
+                          scale: 12,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  SizedBox(
-                    width: 273,
-                  ),
-                  Text('Status',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontStyle: FontStyle.normal,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w100,
-                      color: Hexcolor("#2b22aa"),
+                  Container(
+              margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                    child: Text('Status',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w100,
+                        color: Hexcolor("#2b22aa"),
 
-                    ),),
+                      ),),
+                  ),
                 ],
               ),
               Container(
@@ -196,94 +198,94 @@ class _onStartClickState extends State<onStartClick> {
                 ),
               ],
             ),
-            Column(
-
-              children: <Widget>[
-                SizedBox(
-                  height: 15,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 240,
-                    ),
-                    Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                      alignment: Alignment.topRight,
-                      scale: 12,
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 240,
-                    ),
-                    Text('Status',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w100,
-                        color: Hexcolor("#2b22aa"),
-
-                      ),),
-                  ],
-                ),
-                Container(
-                    width: 310,
-                    height: 50,
-                    child: Placeholder()),
-                SizedBox(
-                  height: 65,
-                ),
-                Container(
-
-                  child: RaisedButton(
-                      onPressed: () => {},
-                      textColor: Colors.white,
-                      color: Hexcolor("#91ca63"),
-                      highlightElevation: 20,
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-
-                      ),
-                      padding: EdgeInsets.symmetric( horizontal: 15),
-
-                      child:Text('     Start Sanitisation     ',
-
-                        style: TextStyle(
-
-                            fontSize: 15
-                        ),)
+            Expanded(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 15,
                   ),
-                ),
-                Container(
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
+                          alignment: Alignment.topRight,
+                          scale: 12,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
 
-                  child: RaisedButton(
-                      onPressed: () => {},
-                      textColor: Colors.white,
-                      color: Hexcolor("#efc454"),
-                      highlightElevation: 20,
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-
-                      ),
-                      padding: EdgeInsets.symmetric(horizontal: 12),
-
-                      child:Text('    Start Deep Cleaning   ',
-                        style: TextStyle(
+                      Container(
+                        margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                        child: Text('Status',
+                          style: TextStyle(
                             fontStyle: FontStyle.normal,
+                            fontSize: 22,
                             fontWeight: FontWeight.w100,
-                            fontSize: 15
+                            color: Hexcolor("#2b22aa"),
 
-                        ),)
+                          ),),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                  Container(
+                      width: 310,
+                      height: 50,
+                      child: Placeholder()),
+                  SizedBox(
+                    height: 65,
+                  ),
+                  Container(
+
+                    child: RaisedButton(
+                        onPressed: () => {},
+                        textColor: Colors.white,
+                        color: Hexcolor("#91ca63"),
+                        highlightElevation: 20,
+
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+
+                        ),
+                        padding: EdgeInsets.symmetric( horizontal: 15),
+
+                        child:Text('     Start Sanitisation     ',
+
+                          style: TextStyle(
+
+                              fontSize: 15
+                          ),)
+                    ),
+                  ),
+                  Container(
+
+                    child: RaisedButton(
+                        onPressed: () => {},
+                        textColor: Colors.white,
+                        color: Hexcolor("#efc454"),
+                        highlightElevation: 20,
+
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+
+                        ),
+                        padding: EdgeInsets.symmetric(horizontal: 12),
+
+                        child:Text('    Start Deep Cleaning   ',
+                          style: TextStyle(
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w100,
+                              fontSize: 15
+
+                          ),)
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),

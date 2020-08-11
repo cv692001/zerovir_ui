@@ -25,7 +25,6 @@ class _summary_screenState extends State<summary_screen> {
                 height: 25,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
                     width: 20,
@@ -69,20 +68,25 @@ class _summary_screenState extends State<summary_screen> {
                   SizedBox(
                     width: 235,
                   ),
-                  Text('Summary',
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontStyle: FontStyle.normal,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w100,
-                      color: Hexcolor("#2b22aa"),
+                  Container(
+                    margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                    child: Text('Summary',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w100,
+                        color: Hexcolor("#2b22aa"),
 
-                    ),),
+                      ),),
+                  ),
                 ],
               ),
+              SizedBox(
+                height: 30,
+              ),
 
-              Padding(
-                padding: const EdgeInsets.fromLTRB(25, 50, 25, 20),
+              Center(
                 child: Container(
 
                   padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
@@ -164,78 +168,84 @@ class _summary_screenState extends State<summary_screen> {
                         ),)
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 30, 5, 0),
-                  child: Container(
-                    width: 225,
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
-                    ),
-                    height: 200,
+                SizedBox(
+                  height: 30,
+                ),
+                Container(
+                  width: 225,
+                  padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Hexcolor('#efc454'),
                   ),
+                  height: 200,
                 ),
               ],
             ),
-            Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 235,
-                    ),
-                    Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                      alignment: Alignment.topRight,
-                      scale: 12,
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      width: 203,
-                    ),
-                    Text('Summary',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        fontStyle: FontStyle.normal,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w100,
-                        color: Hexcolor("#2b22aa"),
+            Expanded(
+              child: Column(
 
-                      ),),
-                  ],
-                ),
-                SizedBox(
-                  height: 140,
-                ),
-                Container(
-
-                  child: RaisedButton(
-                      onPressed: () => {},
-                      textColor: Colors.white,
-                      color: Hexcolor("#91ca63"),
-                      highlightElevation: 20,
-
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-
-                      ),
-                      padding: EdgeInsets.symmetric( horizontal: 35),
-
-                      child:Text('Back',
-
-                        style: TextStyle(
-
-                            fontSize: 18
-                        ),)
+                children: <Widget>[
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
 
-              ],
+                      Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
+                        //alignment: Alignment.topRight,
+                        scale: 12,
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+
+                    children: <Widget>[
+
+                      Container(
+                        margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                        child: Text('Summary',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            fontStyle: FontStyle.normal,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w100,
+                            color: Hexcolor("#2b22aa"),
+
+                          ),),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 140,
+                  ),
+                  Container(
+
+                    child: RaisedButton(
+                        onPressed: () => {},
+                        textColor: Colors.white,
+                        color: Hexcolor("#91ca63"),
+                        highlightElevation: 20,
+
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+
+                        ),
+                        padding: EdgeInsets.symmetric( horizontal: 35),
+
+                        child:Text('Back',
+
+                          style: TextStyle(
+
+                              fontSize: 18
+                          ),)
+                    ),
+                  ),
+
+                ],
+              ),
             )
           ],
         ),

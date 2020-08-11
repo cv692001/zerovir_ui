@@ -27,9 +27,7 @@ class _third_pageState extends State<third_page> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    SizedBox(
-                      width: 250,
-                    ),
+
                     Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                       alignment: Alignment.topRight,
                       scale: 12,
@@ -146,9 +144,6 @@ class _third_pageState extends State<third_page> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    SizedBox(
-                      width: 490,
-                    ),
                     Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                       alignment: Alignment.topRight,
                       scale: 12,
