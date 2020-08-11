@@ -25,6 +25,7 @@ class _summary_screenState extends State<summary_screen> {
                 height: 25,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
                     width: 20,
@@ -49,6 +50,7 @@ class _summary_screenState extends State<summary_screen> {
                     ),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       SizedBox(
                         width: 150,
@@ -62,6 +64,7 @@ class _summary_screenState extends State<summary_screen> {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   SizedBox(
                     width: 235,
@@ -138,6 +141,7 @@ class _summary_screenState extends State<summary_screen> {
               width: 20,
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
                   height: 40,
@@ -177,6 +181,7 @@ class _summary_screenState extends State<summary_screen> {
             Column(
               children: <Widget>[
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
                       width: 235,
@@ -188,6 +193,7 @@ class _summary_screenState extends State<summary_screen> {
                   ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
                       width: 203,

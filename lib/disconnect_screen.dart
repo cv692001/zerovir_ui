@@ -32,9 +32,6 @@ class _disconnect_screenState extends State<disconnect_screen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  SizedBox(
-                    width: 250,
-                  ),
                   Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                     alignment: Alignment.topRight,
                     scale: 12,
@@ -144,14 +141,16 @@ class _disconnect_screenState extends State<disconnect_screen> {
                     height: 15,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+
                     children: <Widget>[
                       SizedBox(
-                        width: 235,
+                        width: 240,
                       ),
                       Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                        alignment: Alignment.topRight,
                         scale: 12,
+
                       ),
                     ],
                   ),

@@ -25,6 +25,7 @@ class _onStartClickState extends State<onStartClick> {
                 height: 25,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
                     width: 20,
@@ -49,10 +50,8 @@ class _onStartClickState extends State<onStartClick> {
                     ),
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      SizedBox(
-                        width: 150,
-                      ),
                       Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                         alignment: Alignment.topRight,
                         scale: 12,
@@ -62,6 +61,7 @@ class _onStartClickState extends State<onStartClick> {
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   SizedBox(
                     width: 273,
@@ -159,6 +159,7 @@ class _onStartClickState extends State<onStartClick> {
               width: 20,
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
                   height: 40,
@@ -196,11 +197,16 @@ class _onStartClickState extends State<onStartClick> {
               ],
             ),
             Column(
+
               children: <Widget>[
+                SizedBox(
+                  height: 15,
+                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
-                      width: 235,
+                      width: 240,
                     ),
                     Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                       alignment: Alignment.topRight,
@@ -209,6 +215,7 @@ class _onStartClickState extends State<onStartClick> {
                   ],
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
                       width: 240,

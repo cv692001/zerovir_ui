@@ -53,6 +53,7 @@ flutter:
     - images/1.jpg
     - images/1.ico
     - images/2.jfif
+    - images/3.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -47,7 +47,8 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
                       ),
                       Padding(
                         padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                        child: Image.asset('images/1.ico',
+                        child: Image.asset('images/4.jpg',
+                        color: Colors.red,
                         alignment:  Alignment.centerRight,),
                       ),
                     ],
@@ -92,7 +93,8 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
                         ),
                         Padding(
                           padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                          child: Image.asset('images/2.jfif',
+                          child: Image.asset('images/4.jpg',
+                            color: Colors.white,
                             alignment:  Alignment.centerRight,),
                         ),
                       ],
@@ -212,11 +214,9 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
               height: 25,
             ),
             Row(
-              mainAxisAlignment: ,
+              mainAxisAlignment: MainAxisAlignment.end ,
               children: <Widget>[
-                SizedBox(
-                  width: 250,
-                ),
+
                 Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                   alignment: Alignment.topRight,
                   scale: 12,
@@ -259,10 +259,9 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
               height: 20,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                SizedBox(
-                  width: 480,
-                ),
+
                 Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                   alignment: Alignment.topRight,
                   scale: 12,

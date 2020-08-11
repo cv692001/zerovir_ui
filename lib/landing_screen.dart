@@ -56,6 +56,7 @@ class _landing_screenState extends State<landing_screen> {
         backgroundColor: Colors.white,
         body: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
                 height: 190,

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: device_screen(),
+      home: onStartClick(),
     );
   }
 }

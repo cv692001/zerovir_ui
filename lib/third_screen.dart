@@ -25,6 +25,7 @@ class _third_pageState extends State<third_page> {
             Column(
               children: <Widget>[
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
                       width: 250,
@@ -143,6 +144,7 @@ class _third_pageState extends State<third_page> {
             Column(
               children: <Widget>[
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     SizedBox(
                       width: 490,
