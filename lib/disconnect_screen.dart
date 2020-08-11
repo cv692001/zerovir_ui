@@ -30,6 +30,7 @@ class _disconnect_screenState extends State<disconnect_screen> {
                 height: 25,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   SizedBox(
                     width: 250,
@@ -143,6 +144,7 @@ class _disconnect_screenState extends State<disconnect_screen> {
                     height: 15,
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       SizedBox(
                         width: 235,

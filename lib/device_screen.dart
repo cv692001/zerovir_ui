@@ -42,10 +42,12 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
                           style: TextStyle(color: Colors.white,
                           fontSize: 15),),
                       ),
-
+                      SizedBox(
+                        width: 120,
+                      ),
                       Padding(
                         padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                        child: Image.asset('images/1.jpg',
+                        child: Image.asset('images/1.ico',
                         alignment:  Alignment.centerRight,),
                       ),
                     ],
@@ -53,7 +55,51 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
     ),
   );
   }
+  Widget deviceCard2( String text ){
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 145),
+      child: Padding(
 
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+
+            height: 50,
+            child: RaisedButton(
+                highlightElevation: 20,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                onPressed: (){ print('Button Clicked.'); },
+                textColor: Colors.white,
+                color: Hexcolor('f6930e'),
+                padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+
+                child: Padding(
+
+                    padding: EdgeInsets.fromLTRB(0,0,0,0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+
+                        Container(
+
+                          padding: EdgeInsets.fromLTRB(10, 4, 4, 4),
+                          child: Text(text,
+                            style: TextStyle(color: Colors.white,
+                                fontSize: 15),),
+                        ),
+                        SizedBox(
+                          width: 120,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
+                          child: Image.asset('images/2.jfif',
+                            alignment:  Alignment.centerRight,),
+                        ),
+                      ],
+                    )))),
+      ),
+    );
+  }
   static Color colorVariation(int note){
     if(note <= 1){
       return Colors.green[50];
@@ -77,6 +123,27 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
       return Colors.green[600];
     }
   }
+  AnimatedBuilder getContainer2() {
+    return new AnimatedBuilder(
+        animation: _resizableController,
+        builder: (context, child) {
+          return Container(
+            //color: colorVariation((_resizableController.value *100).round()),s
+            child: Image.asset("images/ibeacon.png",
+
+              scale: 1.4,
+            ),
+            decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+
+              borderRadius: BorderRadius.all(Radius.circular(100)),
+              border: Border.all(
+                  color: colorVariation((_resizableController.value *10).round()), width:5),
+            ),
+          );
+        });
+  }
+
 
   AnimatedBuilder getContainer() {
     return new AnimatedBuilder(
@@ -130,13 +197,22 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+        body: body(context)
+    );
+  }
+
+  Widget body(BuildContext context) {
+    if(MediaQuery.of(context).orientation == Orientation.portrait)
+    {
+      return Center(
         child: Column(
+
           children: <Widget>[
             SizedBox(
               height: 25,
             ),
             Row(
+              mainAxisAlignment: ,
               children: <Widget>[
                 SizedBox(
                   width: 250,
@@ -161,19 +237,75 @@ class _device_screenState extends State<device_screen> with TickerProviderStateM
               getContainer(),
             ],),
 
-        Expanded(
-          child: new ListView.builder
-            (
-              itemCount: litems.length,
-              itemBuilder: (BuildContext ctxt, int Index) {
-                return deviceCard(litems[Index]);
-              }
-          ),
-        ),
+            Expanded(
+              child: new ListView.builder
+                (
+                  itemCount: litems.length,
+                  itemBuilder: (BuildContext ctxt, int Index) {
+                    return deviceCard(litems[Index]);
+                  }
+              ),
+            ),
 
           ],
         ),
-      ),
-    );
+      );
+    }
+    else {
+      return Center(
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: 480,
+                ),
+                Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
+                  alignment: Alignment.topRight,
+                  scale: 12,
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(150, 0, 25, 0),
+                  child: Stack(children: <Widget>[
+                    getContainer2(),
+                  ],),
+                ),
+
+                Text('Locating ZeroVir',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 24,
+                    color: Hexcolor("#2b22aa"),
+                  ),),
+
+              ],
+            ),
+
+            Expanded(
+              child: new ListView.builder
+                (
+                  itemCount: litems.length,
+                  itemBuilder: (BuildContext ctxt, int Index) {
+                    return deviceCard2(litems[Index]);
+                  }
+              ),
+            ),
+
+          ],
+        ),
+      );
+    }
   }
 }
+
+
+
+

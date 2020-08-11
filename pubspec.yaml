@@ -51,6 +51,8 @@ flutter:
     - images/ibeacon.png
     - images/download.png
     - images/1.jpg
+    - images/1.ico
+    - images/2.jfif
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
