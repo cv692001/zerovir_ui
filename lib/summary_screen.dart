@@ -16,18 +16,22 @@ class _summary_screenState extends State<summary_screen> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
           body: Column(
             children: <Widget>[
               SizedBox(
-                height: 25,
+                height: h/39.466,
               ),
               Row(
                 children: <Widget>[
                   SizedBox(
-                    width: 20,
+                    width: h/29.6
                   ),
                   Container(
 
@@ -35,16 +39,16 @@ class _summary_screenState extends State<summary_screen> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#2b22aa"),
-                        highlightElevation: 20,
+                        highlightElevation: h/29.6,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/29.6),
 
                         ),
 
                         child:Text('Home',
                           style: TextStyle(
-                              fontSize: 15
+                              fontSize: h/39.46
                           ),)
                     ),
                   ),
@@ -52,11 +56,11 @@ class _summary_screenState extends State<summary_screen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       SizedBox(
-                        width: 150,
+                        width: h/3.94,
                       ),
                       Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                         alignment: Alignment.topRight,
-                        scale: 12,
+                        scale: h/49.33,
                       ),
                     ],
                   ),
@@ -66,15 +70,15 @@ class _summary_screenState extends State<summary_screen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   SizedBox(
-                    width: 235,
+                    width: h/2.51,
                   ),
                   Container(
-                    margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                    margin: EdgeInsets.only(left: 0.0, right: h/59.2),
                     child: Text('Summary',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/26.9,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
 
@@ -83,26 +87,32 @@ class _summary_screenState extends State<summary_screen> {
                 ],
               ),
               SizedBox(
-                height: 30,
+                height: h/19.73,
               ),
 
               Center(
                 child: Container(
 
-                  padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  child: Text('Sample Data',
+                    style: TextStyle(
+                      fontSize: h/18.4,
+                      fontStyle: FontStyle.italic,
+                    ),),
+
+                  padding: EdgeInsets.fromLTRB(h/59.2, h/29.6, h/59.2, h/29.6),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(h/29.6),
 
 
 
                     color: Hexcolor('#efc454'),
                   ),
-                  width: 250,
-                  height: 200,
+                  width: h/2.368,
+                  height: h/2.96,
                 ),
               ),
               SizedBox(
-                height: 60,
+                height: h/9.86,
               ),
               Container(
 
@@ -110,22 +120,23 @@ class _summary_screenState extends State<summary_screen> {
                     onPressed: () => {},
                     textColor: Colors.white,
                     color: Hexcolor("#91ca63"),
-                    highlightElevation: 20,
+                    highlightElevation: h/29.6,
 
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(h/29.6),
 
                     ),
-                    padding: EdgeInsets.symmetric( horizontal: 35),
+                    padding: EdgeInsets.symmetric( horizontal: h/16.91),
 
                     child:Text('Back',
 
                       style: TextStyle(
 
-                          fontSize: 18
+                          fontSize: h/32.88,
                       ),)
                 ),
               ),
+
 
 
             ],
@@ -142,13 +153,13 @@ class _summary_screenState extends State<summary_screen> {
         body: Row(
           children: <Widget>[
             SizedBox(
-              width: 20,
+              width: h/18,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 40,
+                  height: h/9,
                 ),
                 Container(
 
@@ -156,29 +167,34 @@ class _summary_screenState extends State<summary_screen> {
                       onPressed: () => {},
                       textColor: Colors.white,
                       color: Hexcolor("#2b22aa"),
-                      highlightElevation: 20,
+                      highlightElevation: h/18,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(h/18),
 
                       ),
 
                       child:Text('Home',
                         style: TextStyle(
-                            fontSize: 15
+                            fontSize: h/24
                         ),)
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: h/12,
                 ),
                 Container(
+                  child: Text('Sample Data',
+                    style: TextStyle(
+                      fontSize: h/14.4,
+                      fontStyle: FontStyle.italic,
+                    ),),
                   width: 225,
-                  padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  padding: EdgeInsets.fromLTRB(h/36, h/10, h/36, h/18),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(h/18),
                     color: Hexcolor('#efc454'),
                   ),
-                  height: 200,
+                  height: h/1.8,
                 ),
               ],
             ),
@@ -187,7 +203,7 @@ class _summary_screenState extends State<summary_screen> {
 
                 children: <Widget>[
                   SizedBox(
-                    height: 10,
+                    height: h/36,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -195,7 +211,7 @@ class _summary_screenState extends State<summary_screen> {
 
                       Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                         //alignment: Alignment.topRight,
-                        scale: 12,
+                        scale: h/30,
                       ),
                     ],
                   ),
@@ -205,12 +221,12 @@ class _summary_screenState extends State<summary_screen> {
                     children: <Widget>[
 
                       Container(
-                        margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                        margin: EdgeInsets.only(left: 0.0, right: h/36),
                         child: Text('Summary',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontStyle: FontStyle.normal,
-                            fontSize: 22,
+                            fontSize: h/16.36,
                             fontWeight: FontWeight.w100,
                             color: Hexcolor("#2b22aa"),
 
@@ -219,7 +235,7 @@ class _summary_screenState extends State<summary_screen> {
                     ],
                   ),
                   SizedBox(
-                    height: 140,
+                    height: h/2.5714,
                   ),
                   Container(
 
@@ -227,19 +243,19 @@ class _summary_screenState extends State<summary_screen> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#91ca63"),
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/18),
 
                         ),
-                        padding: EdgeInsets.symmetric( horizontal: 35),
+                        padding: EdgeInsets.symmetric( horizontal: h/10.28),
 
                         child:Text('Back',
 
                           style: TextStyle(
 
-                              fontSize: 18
+                              fontSize: h/20
                           ),)
                     ),
                   ),

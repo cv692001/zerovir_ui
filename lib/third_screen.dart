@@ -14,13 +14,17 @@ class _third_pageState extends State<third_page> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
         body: Column(
           children: <Widget>[
             SizedBox(
-              height: 25,
+              height: h/39.466,
             ),
             Column(
               children: <Widget>[
@@ -30,76 +34,76 @@ class _third_pageState extends State<third_page> {
 
                     Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                       alignment: Alignment.topRight,
-                      scale: 12,
+                      scale: h/49.33,
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 55,
+                  height: h/10.76,
                 ),
 
                 Text('Select Device Type',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 27,
+                    fontSize: h/21.92,
                     color: Hexcolor("#2b22aa"),
                   ),),
                 SizedBox(
-                  height: 40,
+                  height: h/14.8,
                 ),
                 Row(
                   children: <Widget>[
 
                     SizedBox(
-                      width: 20,
+                      width: h/29.6,
                     ),
 
                     Expanded(
                       child: RaisedButton(
-                        padding: EdgeInsets.fromLTRB(1, 20, 1, 20),
+                        padding: EdgeInsets.fromLTRB(1, h/29.6, 1, h/29.6),
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Colors.white,
-                        highlightElevation: 20,
+                        highlightElevation: h/29.6,
                         shape: RoundedRectangleBorder(
 
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(h/29.6),
                             side: BorderSide(color: Hexcolor("#2b22aa"),
-                            width: 2)),
+                            width: h/296)),
 
                         child:Icon(Icons.bluetooth,
-                          size: 80,
+                          size: h/7.4,
                           color: Hexcolor("#2b22aa"),),
                       ),
                     ),
                     SizedBox(
-                      width: 40,
+                      width: h/14.8,
                     ),
                     Expanded(
                       child:  RaisedButton(
-                        padding: EdgeInsets.fromLTRB(1, 20, 1, 20),
+                        padding: EdgeInsets.fromLTRB(1, h/29.6, 1, h/29.6),
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Colors.white,
-                        highlightElevation: 20,
+                        highlightElevation: h/29.6,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(h/29.6),
                             side: BorderSide(color: Hexcolor("#2b22aa"),
-                            width: 2)),
+                            width: h/296)),
 
                         child:Icon(Icons.cloud_queue,
-                          size: 80,
+                          size: h/7.4,
                           color: Hexcolor("#2b22aa"),),
                       ),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: h/29.6,
                     ),
 
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: h/59.2,
                 ),
                 Row(
                   children: <Widget>[
@@ -109,12 +113,12 @@ class _third_pageState extends State<third_page> {
                         textAlign: TextAlign.center,
 
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: h/39.46,
                           color: Hexcolor("#2b22aa"),
                         ),),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: h/59.2,
                     ),
                     Expanded(
                       child: Text('Cloud',
@@ -137,7 +141,7 @@ class _third_pageState extends State<third_page> {
         body: Column(
           children: <Widget>[
             SizedBox(
-              height: 5,
+              height: h/18,
             ),
             Column(
               children: <Widget>[
@@ -146,7 +150,7 @@ class _third_pageState extends State<third_page> {
                   children: <Widget>[
                     Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                       alignment: Alignment.topRight,
-                      scale: 12,
+                      scale: h/30,
                     ),
                   ],
                 ),
@@ -155,64 +159,65 @@ class _third_pageState extends State<third_page> {
                 Text('Select Device Type',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    fontSize: 27,
+                    fontSize: h/13.33,
                     color: Hexcolor("#2b22aa"),
                   ),),
                 SizedBox(
-                  height: 25,
+                  height: h/14.4,
                 ),
                 Row(
                   children: <Widget>[
 
                     SizedBox(
-                      width: 40,
+                      width: h/9,
                     ),
 
                     Expanded(
                       child: RaisedButton(
-                        padding: EdgeInsets.fromLTRB(1, 20, 1, 20),
+                        padding: EdgeInsets.fromLTRB(1, h/18, 1, h/18),
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Colors.white,
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(h/18),
                             side: BorderSide(color: Hexcolor("#2b22aa"),
-                            width: 2)),
+                            width: h/180)),
 
                         child:Icon(Icons.bluetooth,
-                          size: 70,
+                          size: h/5.14,
                           color: Hexcolor("#2b22aa"),),
                       ),
                     ),
                     SizedBox(
-                      width: 60,
+                      width: h/6,
                     ),
                     Expanded(
-                      child:  RaisedButton(
-                        padding: EdgeInsets.fromLTRB(1, 20, 1, 20),
+                      child: RaisedButton(
+                        padding: EdgeInsets.fromLTRB(1, h/18, 1, h/18),
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Colors.white,
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(h/18),
                             side: BorderSide(color: Hexcolor("#2b22aa"),
-                            width: 2)),
+                                width: h/180)),
 
                         child:Icon(Icons.cloud_queue,
                           size: 70,
                           color: Hexcolor("#2b22aa"),),
                       ),
                     ),
+
                     SizedBox(
-                      width: 40,
+                      width: h/9,
                     ),
 
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: h/36,
                 ),
                 Row(
                   children: <Widget>[
@@ -222,12 +227,12 @@ class _third_pageState extends State<third_page> {
                         textAlign: TextAlign.center,
 
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: h/24,
                           color: Hexcolor("#2b22aa"),
                         ),),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: h/36,
                     ),
                     Expanded(
                       child: Text('Cloud',

@@ -20,6 +20,10 @@ class _disconnect_screenState extends State<disconnect_screen> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
@@ -27,52 +31,52 @@ class _disconnect_screenState extends State<disconnect_screen> {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 25,
+                height:  h/39.466,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                     alignment: Alignment.topRight,
-                    scale: 12,
+                    scale:  h/49.33,
                   ),
                 ],
               ),
               Stack(children: <Widget>[
                 Center(child: Image.asset("images/ibeacon.png",
-                  height: 250,
-                  scale: 0.8,
+                  height: h/2.368,
+                  scale: h/740,
                 )),
                 Transform.rotate(angle: - math.pi / 8,
                   child:  Center(child: Image.asset("images/download.png",
                     color: Hexcolor("#2b22aa"),
-                    height: 250,
+                    height: h/2.368,
 
-                    scale: 0.2,),
+                    scale: h/2960,),
                   ),
                 )
               ],),
               Container(
-                width: 120,
+                width: h/4.933,
                 child: RaisedButton(
                     onPressed: () => {},
                     textColor: Colors.white,
                     color: Hexcolor("#2b22aa"),
-                    highlightElevation: 20,
+                    highlightElevation: h/29.6,
 
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(h/29.6),
 
                     ),
 
                     child:Text('Re Scan',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: h/32.88,
                       ),)
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: h/59.2,
               ),
               Center(
                 child: Text(
@@ -80,7 +84,7 @@ class _disconnect_screenState extends State<disconnect_screen> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Hexcolor("#2b22aa"),
-                      fontSize: 20
+                      fontSize: h/29.6
                   ),
                 ),
               )
@@ -99,34 +103,34 @@ class _disconnect_screenState extends State<disconnect_screen> {
                 children: <Widget>[
                   Stack(children: <Widget>[
                     Center(child: Image.asset("images/ibeacon.png",
-                      height: 250,
-                      scale: 0.8,
+                      height: h/1.44,
+                      scale: h/450,
                     )),
                     Transform.rotate(angle: - math.pi / 8,
                       child:  Center(child: Image.asset("images/download.png",
                         color: Hexcolor("#2b22aa"),
-                        height: 250,
+                        height: h/1.44,
 
-                        scale: 0.2,),
+                        scale: h/1800,),
                       ),
                     )
                   ],),
                   Container(
-                    width: 120,
+                    width: h/3,
                     child: RaisedButton(
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#2b22aa"),
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/18),
 
                         ),
 
                         child:Text('Re Scan',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: h/22.5,
                           ),)
                     ),
                   ),
@@ -138,7 +142,7 @@ class _disconnect_screenState extends State<disconnect_screen> {
               Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 5,
+                    height: h/72,
                   ),
                   Expanded(
                     child: Row(
@@ -146,17 +150,17 @@ class _disconnect_screenState extends State<disconnect_screen> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         SizedBox(
-                          width: 240,
+                          width: h/1.5,
                         ),
                         Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                          scale: 12,
+                          scale: h/30,
 
                         ),
                       ],
                     ),
                   ),
                     SizedBox(
-                      height: 20,
+                      height: h/18,
                     ),
 
 
@@ -169,7 +173,7 @@ bit closer to device connections''',
 
                             style: TextStyle(
                               fontFamily: "Poppins",
-                              fontSize: 18,
+                              fontSize: h/20,
                               fontWeight: FontWeight.bold,
                               color: Hexcolor("#2b22aa"),
                             ),),

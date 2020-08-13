@@ -19,6 +19,10 @@ class _landing_screenState extends State<landing_screen> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
@@ -27,13 +31,13 @@ class _landing_screenState extends State<landing_screen> {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 190,
+                height: h/3.11,
               ),
               Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                scale: 5.7,
+                scale: h/103.85,
               ),
               SizedBox(
-                height: 10,
+                height: h/59.2,
               ),
               Center(
                 child: Text('A Sanitization Solution for public shared spaces',
@@ -41,7 +45,7 @@ class _landing_screenState extends State<landing_screen> {
 
                   style: TextStyle(
                     fontFamily: "Poppins",
-                    fontSize: 22,
+                    fontSize: h/26.90,
                     fontWeight: FontWeight.bold,
                     color: Hexcolor("#2b22aa"),
                   ),),
@@ -59,13 +63,13 @@ class _landing_screenState extends State<landing_screen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: 190,
+                height: h/1.89,
               ),
               Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
-                scale: 5.7,
+                scale: h/63,
               ),
               SizedBox(
-                height: 10,
+                height: h/36,
               ),
               Expanded(
                 child: Center(
@@ -74,7 +78,7 @@ class _landing_screenState extends State<landing_screen> {
 
                     style: TextStyle(
                       fontFamily: "Poppins",
-                      fontSize: 22,
+                      fontSize: h/16.36,
                       fontWeight: FontWeight.bold,
                       color: Hexcolor("#2b22aa"),
                     ),),

@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -16,19 +17,23 @@ class _onStartClickState extends State<onStartClick> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
           body: Column(
             children: <Widget>[
               SizedBox(
-                height: 25,
+                height: h/39.466,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
-                    width: 20,
+                    width: h/29.6,
                   ),
                   Container(
 
@@ -36,16 +41,16 @@ class _onStartClickState extends State<onStartClick> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#2b22aa"),
-                        highlightElevation: 20,
+                        highlightElevation: h/29.6,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/29.6),
 
                         ),
 
                         child:Text('Home',
                           style: TextStyle(
-                              fontSize: 15
+                              fontSize: h/33.6
                           ),)
                     ),
                   ),
@@ -55,7 +60,7 @@ class _onStartClickState extends State<onStartClick> {
                       children: <Widget>[
                         Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                           alignment: Alignment.topRight,
-                          scale: 12,
+                          scale: h/49.33,
                         ),
                       ],
                     ),
@@ -66,12 +71,12 @@ class _onStartClickState extends State<onStartClick> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
                   Container(
-              margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+              margin: EdgeInsets.only(left: 0.0, right: h/59.2),
                     child: Text('Status',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/26.90,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
 
@@ -80,23 +85,28 @@ class _onStartClickState extends State<onStartClick> {
                 ],
               ),
               Container(
-                  height: 50,
+                  height: h/11.84,
                   child: Placeholder()),
               Padding(
-                padding: const EdgeInsets.fromLTRB(15, 50, 15, 20),
+                padding: EdgeInsets.fromLTRB(h/39.46, h/11.84, h/39.46, h/29.6),
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                  child: Text('Sample Data',
+                  style: TextStyle(
+                    fontSize: h/23.68,
+                    fontWeight: FontWeight.w100,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Poppins'
+                  ),),
+                  padding: EdgeInsets.fromLTRB(h/14.8, h/29.6, h/14.8, h/29.6),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-
-
                     color: Hexcolor('#efc454'),
                   ),
-                  height: 150,
+                  height: h/3.94,
                 ),
               ),
               SizedBox(
-                height: 60,
+                height: h/9.86,
               ),
               Container(
 
@@ -104,19 +114,19 @@ class _onStartClickState extends State<onStartClick> {
                     onPressed: () => {},
                     textColor: Colors.white,
                     color: Hexcolor("#91ca63"),
-                    highlightElevation: 20,
+                    highlightElevation: h/29.6,
 
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(h/29.6),
 
                     ),
-                    padding: EdgeInsets.symmetric( horizontal: 15),
+                    padding: EdgeInsets.symmetric( horizontal: h/39.46),
 
                     child:Text('     Start Sanitisation     ',
 
                       style: TextStyle(
 
-                          fontSize: 15
+                          fontSize: h/39.46,
                       ),)
                 ),
               ),
@@ -126,19 +136,19 @@ class _onStartClickState extends State<onStartClick> {
                     onPressed: () => {},
                     textColor: Colors.white,
                     color: Hexcolor("#efc454"),
-                    highlightElevation: 20,
+                    highlightElevation: h/29.6,
 
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(h/29.6),
 
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    padding: EdgeInsets.symmetric(horizontal: h/49.33),
 
                     child:Text('    Start Deep Cleaning   ',
                       style: TextStyle(
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.w100,
-                          fontSize: 15
+                          fontSize: h/39.46,
 
                       ),)
                 ),
@@ -158,13 +168,13 @@ class _onStartClickState extends State<onStartClick> {
         body: Row(
           children: <Widget>[
             SizedBox(
-              width: 20,
+              width: h/18,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 SizedBox(
-                  height: 40,
+                  height: h/9,
                 ),
                 Container(
 
@@ -172,28 +182,33 @@ class _onStartClickState extends State<onStartClick> {
                       onPressed: () => {},
                       textColor: Colors.white,
                       color: Hexcolor("#2b22aa"),
-                      highlightElevation: 20,
+                      highlightElevation: h/18,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                        borderRadius: BorderRadius.circular(h/18),
 
                       ),
 
                       child:Text('Home',
                         style: TextStyle(
-                            fontSize: 15
+                            fontSize: h/24,
                         ),)
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 30, 5, 0),
+                  padding: EdgeInsets.fromLTRB(h/72, h/10, h/72, 0),
                   child: Container(
+                    child: Text('Sample Data',
+                    style: TextStyle(
+                      fontSize: h/14.4,
+                      fontStyle: FontStyle.italic,
+                    ),),
                     width: 225,
-                    padding: EdgeInsets.fromLTRB(100, 20, 100, 20),
+                    padding: EdgeInsets.fromLTRB(h/9, h/18, h/9, h/18),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(h/18),
                       color: Hexcolor('#efc454'),
                     ),
-                    height: 200,
+                    height: h/1.8,
                   ),
                 ),
               ],
@@ -202,7 +217,7 @@ class _onStartClickState extends State<onStartClick> {
               child: Column(
                 children: <Widget>[
                   SizedBox(
-                    height: 15,
+                    height: h/24,
                   ),
                   Expanded(
                     child: Row(
@@ -210,7 +225,7 @@ class _onStartClickState extends State<onStartClick> {
                       children: <Widget>[
                         Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                           alignment: Alignment.topRight,
-                          scale: 12,
+                          scale: h/30,
                         ),
                       ],
                     ),
@@ -220,11 +235,11 @@ class _onStartClickState extends State<onStartClick> {
                     children: <Widget>[
 
                       Container(
-                        margin: const EdgeInsets.only(left: 0.0, right: 10.0),
+                        margin: EdgeInsets.only(left: 0.0, right: h/36),
                         child: Text('Status',
                           style: TextStyle(
                             fontStyle: FontStyle.normal,
-                            fontSize: 22,
+                            fontSize: h/16.36,
                             fontWeight: FontWeight.w100,
                             color: Hexcolor("#2b22aa"),
 
@@ -233,11 +248,11 @@ class _onStartClickState extends State<onStartClick> {
                     ],
                   ),
                   Container(
-                      width: 310,
-                      height: 50,
+                      width: h/1.161,
+                      height: h/7.2,
                       child: Placeholder()),
                   SizedBox(
-                    height: 65,
+                    height: h/5.538,
                   ),
                   Container(
 
@@ -245,19 +260,19 @@ class _onStartClickState extends State<onStartClick> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#91ca63"),
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/18),
 
                         ),
-                        padding: EdgeInsets.symmetric( horizontal: 15),
+                        padding: EdgeInsets.symmetric( horizontal: h/24),
 
                         child:Text('     Start Sanitisation     ',
 
                           style: TextStyle(
 
-                              fontSize: 15
+                              fontSize: h/24
                           ),)
                     ),
                   ),
@@ -267,19 +282,19 @@ class _onStartClickState extends State<onStartClick> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#efc454"),
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/18),
 
                         ),
-                        padding: EdgeInsets.symmetric(horizontal: 12),
+                        padding: EdgeInsets.symmetric(horizontal: h/30),
 
                         child:Text('    Start Deep Cleaning   ',
                           style: TextStyle(
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w100,
-                              fontSize: 15
+                              fontSize: h/24
 
                           ),)
                     ),

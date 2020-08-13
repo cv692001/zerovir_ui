@@ -16,6 +16,10 @@ class _report_screenState extends State<report_screen> {
   }
 
   Widget body(BuildContext context) {
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    double w = queryData.size.width;
+    double h = queryData.size.height;
     if(MediaQuery.of(context).orientation == Orientation.portrait)
     {
       return Scaffold(
@@ -23,13 +27,13 @@ class _report_screenState extends State<report_screen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: 25,
+                height: h/39.466,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
-                    width: 20,
+                    width: h/29.6,
                   ),
                   Container(
 
@@ -37,16 +41,16 @@ class _report_screenState extends State<report_screen> {
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#2b22aa"),
-                        highlightElevation: 20,
+                        highlightElevation: h/29.6,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/29.6),
 
                         ),
 
                         child:Text('Home',
                           style: TextStyle(
-                              fontSize: 15
+                              fontSize: h/39.466,
                           ),)
                     ),
                   ),
@@ -56,7 +60,7 @@ class _report_screenState extends State<report_screen> {
                       children: <Widget>[
                         Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                           alignment: Alignment.topRight,
-                          scale: 12,
+                          scale: h/49.33,
                         ),
                       ],
                     ),
@@ -67,12 +71,12 @@ class _report_screenState extends State<report_screen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 0.0),
+                    margin: EdgeInsets.only(left: h/59.2, right: 0.0),
                     child: Text('Unit Report',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/26.9,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
 
@@ -81,74 +85,204 @@ class _report_screenState extends State<report_screen> {
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: h/118.4,
               ),
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(15, 10, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/23.68,0, h/23.68),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/32.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/296,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/38.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/39.466, h/59.2, h/39.466, h/59.2),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/29.6),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/4.93,
+                    width: h/7.4,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 10, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/23.68,0, h/23.68),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/32.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/296,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/38.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/118.4, h/59.2,h/23.68, h/59.2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(h/29.6),
+                        color: Hexcolor('#d2fff6'),
+                      ),
+                      height: h/4.93,
+                      width: h/7.4,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 10, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
-                    ),
-                    height: 120,
-                    width: 80,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.fromLTRB(0,h/23.68,0, h/23.68),
+                            child: Text('Data',
+
+                              style: TextStyle(
+                                fontSize: h/32.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                          SizedBox(
+                            height: h/296,
+                          ),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                            child: Text('Data',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: h/38.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                        ],
+                      ),
+                      margin: EdgeInsets.fromLTRB(h/118.4, h/59.2,h/23.68, h/59.2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(h/29.6),
+                        color: Hexcolor('#d2fff6'),
+                      ),
+                      height: h/4.93,
+                      width: h/7.4,
                   ),
                 ],
               ),
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(15, 10, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
-                    ),
-                    height: 120,
-                    width: 80,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.fromLTRB(0,h/23.68,0, h/23.68),
+                            child: Text('Data',
+
+                              style: TextStyle(
+                                fontSize: h/32.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                          SizedBox(
+                            height: h/296,
+                          ),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                            child: Text('Data',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: h/38.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                        ],
+                      ),
+                      margin: EdgeInsets.fromLTRB(h/118.4, h/59.2,h/23.68, h/59.2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(h/29.6),
+                        color: Hexcolor('#d2fff6'),
+                      ),
+                      height: h/4.93,
+                      width: h/7.4,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 10, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
-                    ),
-                    height: 120,
-                    width: 80,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.fromLTRB(0,h/23.68,0, h/23.68),
+                            child: Text('Data',
+
+                              style: TextStyle(
+                                fontSize: h/32.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                          SizedBox(
+                            height: h/296,
+                          ),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                            child: Text('Data',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: h/38.4,
+                                fontStyle: FontStyle.italic,
+                              ),),
+                          ),
+                        ],
+                      ),
+                      margin: EdgeInsets.fromLTRB(h/118.4, h/59.2,h/23.68, h/59.2),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(h/29.6),
+                        color: Hexcolor('#d2fff6'),
+                      ),
+                      height: h/4.93,
+                      width: h/7.4,
                   ),
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: h/118.4,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 0.0),
+                    margin: EdgeInsets.only(left: h/59.2, right: 0.0),
                     child: Text('Unit Operation',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/26.9,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
 
@@ -156,84 +290,90 @@ class _report_screenState extends State<report_screen> {
                   ),
                 ],
               ),
+              SizedBox(
+                height: h/29.6,
+              ),
               Row(
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        height: 30,
-                        width: 150,
+
+                        height: h/19.73,
+                        width: h/3.94,
                         child: RaisedButton(
-                            highlightElevation: 20,
+                            highlightElevation: h/29.6,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(10.0))),
                             onPressed: (){ print('Button Clicked.'); },
                             textColor: Colors.white,
-                            color: Hexcolor('f6930e'),
-                            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            color: Colors.white,
+                            padding: EdgeInsets.fromLTRB(h/39.46, 0, h/39.46, 0),
 
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-
-                                Container(
-
-                                  //padding: EdgeInsets.fromLTRB(10, 4, 4, 4),
-                                  child: Text('text',
-                                    style: TextStyle(color: Colors.white,
-                                        fontSize: 15),),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(h/148, 0, h/59.2, 0),
+                                  child: Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/Disconnect-Reset.png',
+                                    alignment: Alignment.topRight,
+                                    scale: h/204.13,
+                                  ),
                                 ),
                                 SizedBox(
-                                  width: 47,
+                                  width: h/14.8,
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                                  child: Image.asset('images/1.jpg',
-                                    color: Colors.red,
-                                    alignment:  Alignment.centerRight,),
+                                Container(
+
+                                  //padding: EdgeInsets.fromLTRB(h/59.2, h/148, h/148, h/148),
+                                  child: Text('text',
+                                    style: TextStyle(color: Hexcolor("#2b22aa"),
+                                        fontSize: h/32.88),),
                                 ),
+
                               ],
                             ))),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        height: 30,
-                        width: 150,
+
+                        height: h/19.73,
+                        width: h/3.94,
                         child: RaisedButton(
-                            highlightElevation: 20,
+                            highlightElevation: h/29.6,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(10.0))),
                             onPressed: (){ print('Button Clicked.'); },
                             textColor: Colors.white,
-                            color: Hexcolor('f6930e'),
-                            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            color: Colors.white,
+                            padding: EdgeInsets.fromLTRB(h/39.46, 0, h/39.46, 0),
 
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-
-                                Container(
-
-                                  //padding: EdgeInsets.fromLTRB(10, 4, 4, 4),
-                                  child: Text('text',
-                                    style: TextStyle(color: Colors.white,
-                                        fontSize: 15),),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(h/148, 0, h/59.2, 0),
+                                  child: Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/x-circle.png',
+                                    alignment: Alignment.topRight,
+                                    scale: h/204.13,
+                                  ),
                                 ),
                                 SizedBox(
-                                  width: 47,
+                                  width: h/14.8,
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                                  child: Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/x-circle.svg',
-                                    alignment: Alignment.topRight,
-                                    scale: 12,
-                                  ),
+                                Container(
+
+                                  //padding: EdgeInsets.fromLTRB(h/59.2, h/148, h/148, h/148),
+                                  child: Text('text',
+                                    style: TextStyle(color: Hexcolor("#2b22aa"),
+                                        fontSize: h/32.88),),
                                 ),
 
                               ],
                             ))),
                   ),
+
                 ],
               ),
             ],
@@ -251,31 +391,31 @@ class _report_screenState extends State<report_screen> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               SizedBox(
-                height: 15,
+                height: h/24
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   SizedBox(
-                    width: 20,
+                    width: h/18,
                   ),
                   Container(
-                    height: 35,
+                    height: h/10.28,
 
                     child: RaisedButton(
                         onPressed: () => {},
                         textColor: Colors.white,
                         color: Hexcolor("#2b22aa"),
-                        highlightElevation: 20,
+                        highlightElevation: h/18,
 
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(h/18),
 
                         ),
 
                         child:Text('Home',
                           style: TextStyle(
-                              fontSize: 13
+                              fontSize: h/27.69
                           ),)
                     ),
                   ),
@@ -285,7 +425,8 @@ class _report_screenState extends State<report_screen> {
                       children: <Widget>[
                         Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/ZeroVir_logo.png',
                           alignment: Alignment.topRight,
-                          scale: 12,
+
+                          scale: h/30,
                         ),
                       ],
                     ),
@@ -296,15 +437,14 @@ class _report_screenState extends State<report_screen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.only(left: 10.0, right: 0.0),
+                    margin: EdgeInsets.only(left: h/36, right: 0.0),
                     child: Text('Unit Report',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/18,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
-
                       ),),
                   ),
                 ],
@@ -313,50 +453,182 @@ class _report_screenState extends State<report_screen> {
               Row(
                 children: <Widget>[
                   Container(
-                    margin: EdgeInsets.fromLTRB(15 ,0, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/14.4,0, h/14.4),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/20.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/180,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/25.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/24 ,0, h/14.4, h/36),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/18),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/3,
+                    width: h/4.5,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/14.4,0, h/14.4),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/20.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/180,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/25.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/72 ,0, h/14.4, h/36),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/18),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/3,
+                    width: h/4.5,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/14.4,0, h/14.4),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/20.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/180,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/25.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/72 ,0, h/14.4, h/36),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/18),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/3,
+                    width: h/4.5,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/14.4,0, h/14.4),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/20.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/180,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/25.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/72 ,0, h/14.4, h/36),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/18),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/3,
+                    width: h/4.5,
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(5, 0, 25, 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Hexcolor('#efc454'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.fromLTRB(0,h/14.4,0, h/14.4),
+                          child: Text('Data',
+
+                            style: TextStyle(
+                              fontSize: h/20.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                        SizedBox(
+                          height: h/180,
+                        ),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(1,0,1, 0),
+                          child: Text('Data',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: h/25.4,
+                              fontStyle: FontStyle.italic,
+                            ),),
+                        ),
+                      ],
                     ),
-                    height: 120,
-                    width: 80,
+                    margin: EdgeInsets.fromLTRB(h/72 ,0, h/14.4, h/36),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(h/18),
+                      color: Hexcolor('#d2fff6'),
+                    ),
+                    height: h/3,
+                    width: h/4.5,
                   ),
+
+
                 ],
               ),
 
@@ -365,12 +637,13 @@ class _report_screenState extends State<report_screen> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
-                    margin: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+
+                    margin: EdgeInsets.fromLTRB(h/36, 0, 0, 0),
                     child: Text('Unit Operation',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontStyle: FontStyle.normal,
-                        fontSize: 22,
+                        fontSize: h/18,
                         fontWeight: FontWeight.w100,
                         color: Hexcolor("#2b22aa"),
 
@@ -380,80 +653,88 @@ class _report_screenState extends State<report_screen> {
               ),
               Row(
                 children: <Widget>[
+
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.fromLTRB(h/36, h/36, h/14.4, h/36),
                     child: Container(
-                        height: 30,
-                        width: 150,
+
+                        height: h/12.73,
+                        width: h/2.54,
                         child: RaisedButton(
-                            highlightElevation: 20,
+                            highlightElevation: h/29.6,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                                borderRadius: BorderRadius.all(Radius.circular(h/36))),
                             onPressed: (){ print('Button Clicked.'); },
                             textColor: Colors.white,
-                            color: Hexcolor('f6930e'),
-                            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            color: Colors.white,
+                            padding: EdgeInsets.fromLTRB(h/39.46, 0, h/39.46, 0),
 
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
 
-                                Container(
-
-                                  //padding: EdgeInsets.fromLTRB(10, 4, 4, 4),
-                                  child: Text('text',
-                                    style: TextStyle(color: Colors.white,
-                                        fontSize: 15),),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(h/148, 0, h/59.2, 0),
+                                  child: Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/Disconnect-Reset.png',
+                                    alignment: Alignment.topRight,
+                                    scale: 1,
+                                  ),
                                 ),
                                 SizedBox(
-                                  width: 47,
+                                  width: h/14.8,
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                                  child: Image.asset('images/1.jpg',
-                                    color: Colors.red,
-                                    alignment:  Alignment.centerRight,),
+                                Container(
+
+                                  //padding: EdgeInsets.fromLTRB(h/59.2, h/148, h/148, h/148),
+                                  child: Text('text',
+                                    style: TextStyle(color: Hexcolor("#2b22aa"),
+                                        fontSize: h/22.88),),
                                 ),
+
                               ],
                             ))),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.fromLTRB(h/36, h/36, h/14.4, h/36),
                     child: Container(
-                        height: 30,
-                        width: 150,
+
+                        height: h/12.73,
+                        width: h/2.54,
                         child: RaisedButton(
-                            highlightElevation: 20,
+                            highlightElevation: h/29.6,
                             shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10.0))),
+                                borderRadius: BorderRadius.all(Radius.circular(h/36))),
                             onPressed: (){ print('Button Clicked.'); },
                             textColor: Colors.white,
-                            color: Hexcolor('f6930e'),
-                            padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                            color: Colors.white,
+                            padding: EdgeInsets.fromLTRB(h/39.46, 0, h/39.46, 0),
 
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
 
-                                Container(
-
-                                  //padding: EdgeInsets.fromLTRB(10, 4, 4, 4),
-                                  child: Text('text',
-                                    style: TextStyle(color: Colors.white,
-                                        fontSize: 15),),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(h/148, 0, h/59.2, 0),
+                                  child: Image.network('https://zerovir-content.s3.ap-south-1.amazonaws.com/x-circle.png',
+                                    alignment: Alignment.topRight,
+                                    scale: 1,
+                                  ),
                                 ),
                                 SizedBox(
-                                  width: 47,
+                                  width: h/14.8,
                                 ),
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
-                                  child: Image.asset('images/1.jpg',
-                                    color: Colors.red,
-                                    alignment:  Alignment.centerRight,),
+                                Container(
+
+                                  //padding: EdgeInsets.fromLTRB(h/59.2, h/148, h/148, h/148),
+                                  child: Text('text',
+                                    style: TextStyle(color: Hexcolor("#2b22aa"),
+                                        fontSize: h/22.88),),
                                 ),
+
                               ],
                             ))),
                   ),
+
                 ],
               ),
             ],
