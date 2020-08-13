@@ -5,6 +5,7 @@ import 'package:zerovir_ui/disconnect_screen.dart';
 import 'package:zerovir_ui/device_screen.dart';
 import 'package:zerovir_ui/onStartClickConnnectingPage.dart';
 import 'package:zerovir_ui/summary_screen.dart';
+import 'package:zerovir_ui/report_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: third_page(),
+      home: device_screen(),
     );
   }
 }
